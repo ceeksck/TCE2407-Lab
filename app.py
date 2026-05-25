@@ -6,6 +6,18 @@ from matplotlib.lines import Line2D
 
 st.set_page_config(page_title="CE Numerical Methods Lab", layout="wide")
 
+# Force Streamlit to hide the top-right toolbar and menus for a clean interface
+st.markdown(
+    """
+    <style>
+    #MainMenu {visibility: hidden;}
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # App Header
 st.title("🧮 CE Numerical Methods Lab App")
 st.markdown("Use this web calculator to experiment with iterative linear solvers and eigenvalue problems.")
